@@ -9,18 +9,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- 부가적인 테마 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style type="text/css">
+        nav {
+            transition: all .3s;
+        }
+        nav a{
+            transition: all .2s;
+            background-color: transparent;
+            color: gray;
+        }
+        nav.navbar.shrink {
+            background-color: white;
+        }
+        .navbar-brand {
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body id="page-top">
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Resume</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+                <span class="navbar-toggler-icon">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
@@ -37,53 +56,44 @@
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
                 </ul>
+                
             </div>
+            
         </div>
     </nav>
+    <!--// Navigation-->
     
-    
-    
-    <!-- Header -->    
-    <header class="masthead">
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">큰 제목</div>
-                <div class="intro-heading text-uppercase">내용</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">버튼</a>
-            </div>
-        </div>
-    </header>
-    
-    
-    <!-- About -->
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">적을 소제목</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">적을 내용</p>
-          </div>
-        </div>
-      </div>
+    <section class="bg-primary" id="about" style="height: 600px;">
+        about 영역
     </section>
     
-    <!-- Skills -->
-    <section class="bg-primary" id="skills">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">적을 소제목</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">적을 내용</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#portfolio">포트폴리오로 이동</a>
-          </div>
-        </div>
-      </div>
+    <section id="education" style="height: 600px;">
+        education 영역
+    </section>
+    
+    <section class="bg-primary" id="skills" style="height: 600px;">
+        skills 영역
+    </section>
+    
+    <section id="portfolio" style="height: 600px;">
+        portfolio 영역
+    </section>
+    
+    <section class="bg-primary" id="contact" style="height: 600px;">
+        contact 영역
     </section>
     
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('shrink');
+            } else {
+                $('nav').removeClass('shrink');
+            }
+        });        
+    </script>
 </body>
 </html>
