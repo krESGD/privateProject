@@ -10,20 +10,28 @@
     <!-- 부가적인 테마 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <style type="text/css">
+        header {
+            min-height: 650px;
+            background: url("../resume/img/header.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
         nav {
             transition: all .3s;
         }
         nav a{
-            transition: all .2s;
-            background-color: transparent;
+            transition: all .2s;            
             color: gray;
+        }
+        nav a:hover {
+            background-color: transparent;
         }
         nav.navbar.shrink {
             background-color: white;
         }
         .navbar-brand {
             font-size: 25px;
-        }
+        }        
     </style>
 </head>
 <body id="page-top">
@@ -62,6 +70,10 @@
         </div>
     </nav>
     <!--// Navigation-->
+    
+    <header class="masthead text-center text-white d-flex">
+        Header 영역
+    </header>
     
     <section class="bg-primary" id="about" style="height: 600px;">
         about 영역
