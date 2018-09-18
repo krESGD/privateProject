@@ -9,18 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- 부가적인 테마 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <style type="text/css">
-        header {
-            min-height: 650px;
-            background: url("../resume/img/header.jpg");
-            background-position: center center;
-            background-size: cover;
-            padding-top: 10rem;
-            color: white;            
-        }
-        header h1 {
-            font-size: 30px;
-        }
+    <style type="text/css">        
         nav {
             color: black;
             transition: all .3s;
@@ -28,7 +17,7 @@
             font-weight: bold;
         }
         nav a{
-            transition: all .2s;            
+            transition: all .2s;
             color: black;
         }
         nav .shrink {
@@ -48,6 +37,38 @@
         .navbar-brand .shrink{
             color: #0707c7;
         }
+        
+        header {
+            min-height: 650px;
+            background: url("./img/header.jpg");
+            background-position: center center;
+            background-size: cover;
+            padding-top: 20rem;
+            color: white;            
+        }
+        header h1 {
+            font-size: 40px;
+        }
+        hr {
+            max-width: 50px; 
+            border-color: #a9bbe2;
+        }
+        header p {
+            margin: auto;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: #bac8e2;
+        }
+        .btn-xl {
+            padding: 1rem 2rem;
+        }
+        .btn-primary {
+            background-color: #0707c7;
+        }
+        .btn {
+            font-weight: 700;
+            border-radius: 300px;
+        }
     </style>
 </head>
 <body id="page-top">
@@ -63,9 +84,6 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scroll" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#skills">Skills</a>
@@ -88,10 +106,15 @@
     <header class="text-center text-white d-flex">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-lg-offset-1">
                     <h1 class="text-center">
                         <strong>Welcome to My Resume Page</strong>
                     </h1>
+                    <hr>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                   <p>저의 이력서를 홈페이지 형식으로 만들어<br>보다 많은 기업들에게 제 자신을 어필할 수 있는 기회로 삼고자 합니다.</p>
+                   <a class="btn btn-primary btn-xl scroll" href="#about">Find out More</a>
                 </div>
             </div>
         </div>
@@ -102,28 +125,22 @@
     <section class="bg-primary" id="about" style="height: 600px;">
         about 영역
     </section>
-    <!-- // about 영역 -->
-    
-    <!-- education 영역 -->
-    <section id="education" style="height: 600px;">
-        education 영역
-    </section>
-    <!-- // education 영역 -->
+    <!-- // about 영역 -->    
     
     <!-- skills 영역 -->
-    <section class="bg-primary" id="skills" style="height: 600px;">
+    <section id="skills" style="height: 600px;">
         skills 영역
     </section>
     <!-- // skills 영역 -->
     
     <!-- portfolio 영역 -->
-    <section id="portfolio" style="height: 600px;">
+    <section class="bg-primary" id="portfolio" style="height: 600px;">
         portfolio 영역
     </section>
     <!-- // portfolio 영역 -->
     
     <!-- contact 영역 -->
-    <section class="bg-primary" id="contact" style="height: 600px;">
+    <section id="contact" style="height: 600px;">
         contact 영역
     </section>
     <!-- // contact 영역 -->
@@ -150,7 +167,7 @@
                     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                     if (target.length) {
                         $('html, body').animate({
-                            scrollTop: (target.offset().top -56)
+                            scrollTop: (target.offset().top -50)
                         }, 1000);
                         return false;
                     }
