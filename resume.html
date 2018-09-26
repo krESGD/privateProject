@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
     <meta name="keywords" content="">
     <!-- 합쳐지고 최소화된 최신 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <style type="text/css">        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/info.css">
+    <style type="text/css">
+        body {
+            position: relative;
+        }
         nav {
             color: black;
             transition: all .3s;
@@ -57,7 +61,7 @@
             margin: auto;
             margin-bottom: 20px;
             font-size: 20px;
-            color: #bac8e2;
+            color: rgba(255, 255, 255, .7);
         }
         .btn-xl {
             padding: 1rem 2rem;
@@ -69,14 +73,19 @@
             font-weight: 700;
             border-radius: 300px;
         }
+        .about {
+            padding-top: 15rem;
+        }
+        .about p {
+            font-size: 20px;
+        }
     </style>
 </head>
 <body id="page-top">
-    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand scroll" href="#page-top">Resume</a>
+            <a class="navbar-brand" href="#page-top">Resume</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon">Menu</span>
             </button>
@@ -86,13 +95,13 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
                 
@@ -123,7 +132,20 @@
     
     <!-- about 영역 -->
     <section class="bg-primary" id="about" style="height: 600px;">
-        about 영역
+        <div class="container about">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2>저에 대한 기본 정보들을 볼 수 있습니다.</h2>
+                    <hr class="light my-4">
+                    <p>학력, 생년월일 등 이력서에 필요한 기본 신상명세를 표로 정리했습니다.<br>
+                    기본 정보는 새 창을 열어서 확인할 수도 있고,<br>
+                    새 창을 열지 않고도 확인할 수 있게 만들었습니다.</p>
+                    <br>
+                    <a class="btn btn-default btn-xl" data-toggle="modal" data-target="#Info">현재 창에서 보기</a>
+                    <a class="btn btn-default btn-xl" onclick="info();">새 창에서 보기</a>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- // about 영역 -->    
     
@@ -145,11 +167,155 @@
     </section>
     <!-- // contact 영역 -->
     
+    <!-- modal 영역 -->
+    <div class="modal fade" id="Info" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>이력서</h2>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tbody>
+                            <!--기본 정보 영역-->
+                            <th colspan="5">기본 정보</th>
+                            <tr>
+                                <td class="picture" rowspan="5">
+                                    <div class="img-box">
+                                        <img src="img/picture.jpg" alt="증명사진" />
+                                    </div>
+                                </td>
+                                <td class="subject">이름</td>
+                                <td style="font-size: 20px; font-weight: bold;">김선우</td>
+                                <td colspan="2">1987년 11월 29일생</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">휴대폰</td>
+                                <td>010-3616-7478</td>
+                                <td class="subject">Email</td>
+                                <td>06241@hanmail.net</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">주소</td>
+                                <td colspan="3">경기도 성남시 수정구 산성동 187번지 2층(구 주소)<br>
+                                경기도 성남시 수정구 수정남로 628번길 6-8 2층(신 주소)</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">학력</td>
+                                <td>아주대학교 (졸업)</td>
+                                <td class="subject">경력</td>
+                                <td>아폴로테크 (총 9개월)</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">자격증</td>
+                                <td>자동차 운전면허 (1종 보통)</td>
+                                <td class="subject">어학</td>
+                                <td>TOEIC (680점)</td>
+                            </tr>
+                            <!--//기본 정보 영역-->
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+                            <!--학력 상세 영역-->
+                            <th colspan="5">학력 상세</th>
+                            <tr>
+                                <td rowspan="2" style="padding-top: 15px;">2006. 03 ~ 2013. 08<br>(입학~졸업)</td>
+                                <td class="subject">학교명</td>
+                                <td>아주대학교</td>
+                                <td rowspan="2" class="subject" style="padding-top: 25px;">학점</td>
+                                <td rowspan="2" style="padding-top: 25px;">2.85 / 4.5</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">학부</td>
+                                <td>전자공학부</td>
+                            </tr>
+                            <tr>
+                                <td>2003. 03 ~ 2006. 02<br>(입학~졸업)</td>
+                                <td class="subject">학교명</td>
+                                <td colspan="3">성일고등학교</td>
+                            </tr>
+                            <!--//학력 상세 영역-->
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+                            <!--경력 상세 영역-->
+                            <th colspan="5">경력 상세</th>
+                            <tr>
+                                <td rowspan="5">2016. 12 ~ 2017. 08<br>(9개월)<br>해외근무: 2개월</td>
+                                <td class="subject">회사명</td>
+                                <td colspan="3">아폴로테크</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">팀 / 직위</td>
+                                <td colspan="3">생산지원팀 / 사원</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">주요직무</td>
+                                <td colspan="3">공정 엔지니어</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">업무</td>
+                                <td colspan="3">생산지원, 고객사 응대(국내 : 아산, 구미 / 해외 : 베트남)</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">상세 업무내용</td>
+                                <td colspan="3">- ESC 엔지니어로서 고객사 응대<br>- PRESS 생산공정시 원자재 비용 절감 (기존의 40%로 절감)</td>
+                            </tr>
+                            <!--//경력 상세 영역-->
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+                            <!--자격증 상세 영역-->
+                            <th colspan="5">자격증 상세</th>
+                            <tr>
+                                <td rowspan="2">2014. 07<br>(취득일자)</td>
+                                <td class="subject">자격증</td>
+                                <td colspan="3">자동차운전면허 (1종 보통)</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">발급기관</td>
+                                <td colspan="3">서울지방경찰청</td>
+                            </tr>
+                            <!--//자격증 상세 영역-->
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+                            <!--어학 상세 영역-->
+                            <th colspan="5">어학 상세</th>
+                            <tr>
+                                <td rowspan="2">2014. 07<br>(취득일자)</td>
+                                <td class="subject">어학시험</td>
+                                <td colspan="3">TOEIC</td>
+                            </tr>
+                            <tr>
+                                <td class="subject">점수</td>
+                                <td colspan="3">680점</td>
+                            </tr>
+                            <!--//어학 상세 영역-->
+                            <tr>
+                                <td colspan="5"></td>
+                            </tr>
+                            <!--기타 영역-->
+                            <th colspan="5">기타</th>
+                            <tr>
+                                <td class="subject">GITHUB 주소</td>
+                                <td><a href="https://github.com/krESGD">https://github.com/krESGD</a></td>
+                            </tr>
+                            <!--기타 영역-->           
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal 영역 -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        
+    <script type="text/javascript">        
         /** 하단으로 스크롤시 navbar 배경색을 흰색으로 */
         $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
@@ -158,6 +324,7 @@
                 $('nav').removeClass('shrink');
             }
         });
+        
         
         /** 요소 클릭시 부드럽게 이동 */
         $(function() {
@@ -174,6 +341,10 @@
                 }
             });
         });
+        
+        function info() {
+            window.open('info.html', 'info', "width=800, height=800");
+        }
     </script>
 </body>
 </html>
