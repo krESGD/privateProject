@@ -13,13 +13,43 @@
     <!-- 각 탭의 화면 설정 -->
     <div class="tab-content">
         <div class="tab-pane fade in active" id="first">
-            <p>첫번째 탭의 내용입니다.</p>
+            <h3>Modulator 설계</h3>
+            <img src="../img/Portfolio/Portfolio2/1-1.png" />
+            <p>Random Integer Generator를 통해 랜덤 Digital값을 생성한 후, 2개의 Sine Wave와 각각 곱한다.
+            <br/>이 때, Sine Wave1과 Sine Wave2의 주파수를 서로 다르게 설정한다.</p>
+            <p>Sine Wave1 : 2&pi;&#42;2 &#40;Digital신호 0에 해당&#41;
+            <br/>Sine Wave2 : 2&pi;&#42;8 &#40;Digital신호 1에 해당&#41;</p>
+            <br/>
+            <img src="../img/Portfolio/Portfolio2/1-2.png" />
+            <p>Sine Wave1에는 Not을 이용해 값을 반전 시킨 후, 각각의 value에 따른 Sine wave를 곱한다.
+            <br/>이렇게 하면 Sine Wave1은 랜덤값과 곱했을 때 Digital신호 1에 해당하는 값이 0이 되고,
+            <br/>Sine Wave2는 랜덤값과 곱했을 때 Digital신호 0에 해당하는 값이 0이 된다.</p>
+            <p>&#61;서로 반대값일 경우 0이 된다. 이 후 두 Wave를 합친다.</p>
+            <p>변조된 신호를 Demodulator에 전달한다.</p>
         </div>
         <div class="tab-pane fade" id="second">
-            <p>두번째 탭의 내용입니다.</p>
+            <h3>Demodulator 설계</h3>
+            <img src="../img/Portfolio/Portfolio2/2-1.png" />
+            <p>Modulator로부터 전달받은 신호와 같은 주파수, 위상을 갖는 신호를 곱한다.
+            <br/>이를 통해 수신받는 신호의 위상을 추출할 수 있게 되고, 복조에 이용할 수 있게 된다.</p>
+            <br/>
+            <img src="../img/Portfolio/Portfolio2/2-2.png" />
+            <p>위상이 추출된 신호를 저역 통과 필터에 통과시켜 대역 바깥의 신호들을 제거하면
+            <br/>원래의 신호에 가까운 파형이 남는다.</p>
+            <br/>
+            <img src="../img/Portfolio/Portfolio2/2-3.png" />
+            <p>파형에서 특정값을 기준으로 하여 0과 1을 구분지으면
+            <br/>Digital 신호를 얻을 수 있다.</p>
         </div>
         <div class="tab-pane fade" id="third">
-            <p>세번째 탭의 내용입니다.</p>
+            <h3>Modulator 파형</h3>
+            <img src="../img/Portfolio/Portfolio2/3-1.png" />
+            <br/>
+            <h3>Demodulator 파형</h3>
+            <img src="../img/Portfolio/Portfolio2/3-2.png" />
+            <br/>
+            <h3>결과 정리</h3>
+            <img src="../img/Portfolio/Portfolio2/3-3.png" />
         </div>
     </div>
 </div>
