@@ -159,7 +159,7 @@
     <!-- // skills 영역 -->
     
     <!-- portfolio 영역 -->
-    <section class="bg-primary" id="portfolio" style="min-height: 600px;">
+    <section class="bg-primary" id="portfolio" style="min-height: 900px;">
         <div class="container portfolio">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -184,9 +184,16 @@
                         </a>
                     </div>
                     <!-- // Portfolio2 -->
+                    <!-- Portfolio3 -->
+                    <div class="col-md-6 col-lg-6 portfolio" style="margin-top: 20px;">
+                        <a class="portfolio" data-toggle="modal" data-target="#Portfolio3">
+                            <img src="img/Port3_Thumb.png" />
+                        </a>
+                    </div>
+                    <!-- // Portfolio3 -->
                 </div>
             </div>
-            <div class="col-lg-4 col-lg-offset-4" style="margin-top: 100px;">
+            <div class="col-lg-4 col-lg-offset-4" style="margin-top: 50px;">
                <a class="btn btn-primary btn-xl scroll" href="portfolio.html">각 포트폴리오의 상세 설명 페이지로 이동</a>
             </div>
         </div>        
@@ -415,7 +422,32 @@
             </div>
         </div>
     </div>
-    <!-- // 포트폴리오2 modal 영역 -->    
+    <!-- // 포트폴리오2 modal 영역 -->
+    <!-- 포트폴리오3 modal 영역 -->
+    <div class="modal fade" id="Portfolio3" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>주류 판매 사이트(쇼핑몰) 구축 - Java &#40;Spring Framework&#41;</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Java Spring Framework를 활용하여 주류 쇼핑몰 사이트 구축 팀 프로젝트를 진행하였고,
+                    <br/>각 상품 별 메뉴 클릭시 리스트 조회 및 개별 상품 상세화면 부분을 담당 하였습니다.</p>
+                    <br/>
+                    <img src="img/Port3_Modal1.png" />
+                    <h3>각 상품별 메뉴 검색시 DB에서 list 조회하여 view에 전달</h3>
+                    <br/>
+                    <img src="img/Port3_Modal2.png" />
+                    <h3>특정 상품의 id값을 get 방식으로 전송하고,
+                    <br/>개별 상품을 DB에서 조회하여 새창에서 view에 전달</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 포트폴리오2 modal 영역 -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
